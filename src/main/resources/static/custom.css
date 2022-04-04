@@ -1,0 +1,420 @@
+#title1 {
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 5%;
+}
+
+#title2 {
+    font-family: 'Leckerli One', cursive;
+}
+
+#button-add {
+    border-radius: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #7b55cc;
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(73, 73, 73);
+}
+
+/* hover on button-add */
+#button-add:hover {
+    background-color: #7b55cc;
+    color: white;
+}
+
+#categories-list {
+    margin: 10px 0;
+}
+
+.box {
+    display: inline;
+    float: left;
+}
+  
+.box select {
+    width: 100%;
+    font-size: 15px;
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+  
+.box select option {
+    padding: 30px;
+}
+
+#categories-list option {
+    background-color: #7b55cc2a;
+}
+
+#task-content {
+    position: relative;
+    border-radius: 20px;
+}
+
+#tasks-list {
+    text-align: left;
+    margin-top: 50px;
+    overflow-wrap: break-word;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #7b55cc1a;
+    border-radius: 10px; 
+    max-width: 100%;
+    max-height: 40px;
+    padding: 20px 50px 20px 50px;
+    margin-bottom: 20px;
+    border-left: 4px solid transparent;
+    overflow: hidden;
+    margin: 0 0 15px;
+}
+
+.task-done {
+    background-color: #dfdfdf28;
+    color: rgba(58, 58, 58, 0.459);
+    border-radius: 10px; 
+    max-width: 98%;
+    max-height: 40px;
+    padding: 20px 50px 20px 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.task-done .trash {
+    opacity: 40%;
+    color: rgba(105, 141, 177, 0.699);
+}
+
+.pen {
+    display: flex;
+    border: none;
+    color: #7b55ccb2;
+    background-color: rgba(151, 151, 151, 0);
+    padding: 1rem;
+}
+
+/*hover on pen*/
+.pen:hover {
+    opacity: 100;
+    transition: 0.7s;
+    color: rgb(252, 138, 72);
+    border: hidden;
+    zoom: 110%;
+    cursor: pointer;
+}
+
+.trash {
+    margin-right: 0px;
+    color: #7b55ccb2;
+}
+
+/*hover on trash icon */
+.trash:hover {
+    opacity: 100;
+    transition: 0.7s;
+    border-radius: 10%;
+    color: rgb(224, 64, 64);
+    zoom: 110%;
+    cursor: pointer;
+}
+
+#task-category {
+    margin-top: 2%;
+    justify-content: left;
+}
+
+#task-category button {
+    margin-right: 5%;
+    color: #7b55cc;
+}
+
+#button-remove {
+    width: 20%;
+    border: 1px solid #7b55cc;
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(73, 73, 73);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* hover on button-remove */
+#button-remove:hover {
+    background-color: #7b55cc;
+    color: white;
+}
+
+.date {
+    display: block;
+    font-size: x-small;
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+}
+
+.checkbox {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid rgb(223, 223, 223);
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox:checked {
+    background-color: rgba(126, 223, 126, 0.753);
+    outline: 1px solid rgba(87, 87, 87, 0.349);
+    outline-offset: 2px;
+    width: 0.7em;
+    height: 0.7em;
+    border: 1px solid rgba(199, 199, 199, 0.37);
+}
+
+.checkbox:hover {
+    background-color: rgb(126, 223, 126);
+    outline: 1px solid rgba(87, 87, 87, 0.521);
+    outline-offset: 2px;
+    width: 1em;
+    height: 1em;
+}
+
+.checkbox:checked:hover {
+    background-color: rgba(126, 223, 126, 0.753);
+    outline: 1px solid rgba(87, 87, 87, 0.349);
+    outline-offset: 2px;
+    width: 0.7em;
+    height: 0.7em;
+    border: 1px solid rgba(199, 199, 199, 0.37);
+}
+
+.task-container {
+    margin-top: 0 auto;
+    display: flex;
+    width: 50%;
+    margin-top: 50px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.task.orange {
+    border-color: rgba(255, 124, 37, 0.808);
+}
+
+.task.blue {
+    border-color: rgba(0, 120, 190, 0.884);
+}
+
+.task.green {
+    border-color: rgba(7, 206, 163, 0.918);
+}
+
+.task.pink {
+    border-color: rgba(250, 92, 203, 0.664);
+}
+
+.task.purple {
+    border-color: #7b55cc;
+}
+
+.task-done.orange {
+    border-color: rgba(255, 124, 37, 0.329);
+}
+
+.task-done.blue {
+    border-color: rgba(0, 120, 190, 0.295);
+}
+
+.task-done.green {
+    border-color: rgba(7, 206, 163, 0.295);
+}
+
+.task-done.pink {
+    border-color: rgba(250, 92, 203, 0.233);
+}
+
+.task-done.purple {
+    border-color: #7b55cc5d;
+}
+
+#counter-text {
+    text-transform: uppercase;
+}
+
+/* MOBILE VERSION */
+@media only screen and (max-width: 800px) {
+    #title1 {
+        text-align: center;
+        font-family: 'Alfa Slab One', cursive;
+        margin: 5%;
+    }
+    
+    #title2 {
+        font-family: 'Leckerli One', cursive;
+    }
+    
+    #button-add {
+        border-radius: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #7b55cc;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        color: white;
+        font-size: medium;
+        font-weight: 500;
+    }
+    
+    #categories-list {
+        margin: 10px 0;
+    }
+    
+    #categories-list option {
+        background: #7b55cc1a;
+    }
+    
+    #task-content {
+        position: relative;
+        border-radius: 20px;
+    }
+    
+    #tasks-list {
+        text-align: left;
+        margin-top: 50px;
+        overflow-wrap: break-word;
+    }
+    
+    .task {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #7b55cc1a;
+        box-shadow: 0 1px 5px 0 rgba(105, 141, 177, 0.514);
+        border-radius: 10px; 
+        max-width: 100%;
+        max-height: 70px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        margin: 0 0 15px;
+    }
+    
+    .task-done {
+        background-color: #dfdfdf28;
+        color: rgba(58, 58, 58, 0.459);
+        box-shadow: 0 1px 5px 0 rgba(105, 141, 177, 0.301);
+        border-radius: 10px; 
+        max-width: 98%;
+        max-height: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .task-done .trash {
+        opacity: 40%;
+        color: rgba(105, 141, 177, 0.699);
+    }
+    
+    .pen {
+        display: flex;
+        border: none;
+        color: #7b55ccb2;
+        background-color: rgba(151, 151, 151, 0);
+        padding: 1rem;
+    }
+    
+    .trash {
+        margin-right: 0px;
+        color: #7b55ccb2;
+    }
+    
+    #task-category {
+        margin-top: 2%;
+        justify-content: left;
+    }
+    
+    #task-category button {
+        margin-right: 5%;
+        color: #7b55cc;
+    }
+    
+    #button-remove {
+        width: 40%;
+        height: 20%;
+        background-color: #7b55cc;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        color: white;
+        font-size: medium;
+        font-weight: 500;
+        margin: 20px 30%;
+        cursor: pointer;
+    }
+    
+    .date {
+        display: block;
+        font-size: x-small;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .checkbox {
+        width: 1.3em;
+        height: 1.3em;
+        margin: 5px;
+        background-color: white;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid rgb(223, 223, 223);
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .checkbox:hover {
+        background-color: white;
+        border: 1px solid rgb(223, 223, 223);
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        width: 1.3em;
+        height: 1.3em;
+        margin: 5px;
+    }
+
+    .box select {
+        background-color:  #7b55cc;
+        color: white;
+        width: 100%;
+        border: none;
+        font-size: 15px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+      }
+    
+    .checkbox:checked {
+        background-color: rgba(126, 223, 126, 0.753);
+        margin: 5px;
+        outline: 1px solid rgba(87, 87, 87, 0.349);
+        outline-offset: 2px;
+        width: 0.7em;
+        height: 0.7em;
+        border: 1px solid rgba(199, 199, 199, 0.37);
+    }
+    
+    .task-container {
+        margin-top: 0 auto;
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        flex-direction: column;
+    }
+}

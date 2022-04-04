@@ -1,6 +1,8 @@
 package com.digitazon.TodoList.controllers;
 
+import com.digitazon.TodoList.entities.Category;
 import com.digitazon.TodoList.entities.Task;
+import com.digitazon.TodoList.repositories.CategoryRepository;
 import com.digitazon.TodoList.repositories.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.*;
 public class TaskController {
 
     @Autowired
+    private CategoryRepository categoryRepository;
+
+    @Autowired
     private TaskRepository taskRepository;
 
     @GetMapping("/")
@@ -21,14 +26,16 @@ public class TaskController {
     }
 
     @GetMapping("/{id}")
-    public Task read(@PathVariable int id) { //prende prima variabile che arriva, avrà etichetta id e la utilizza dall'URL come argomento del metodo
+    public Task read(@PathVariable int id) {
         return taskRepository.findById(id).orElseThrow(); //.orElseThrow() per prendere il valore Optional
     }
 
     @PostMapping("/add")
     public Task create(@RequestBody Task newTask) {
-        System.out.println(newTask.getCategory().getColor());
-        return taskRepository.save(newTask);
+        Task savedTask = taskRepository.save(newTask);
+        Category category = categoryRepository.findById(savedTask.getCategory().getId()).orElseThrow();
+        savedTask.setCategory(category);
+        return savedTask;
     }
 
     @DeleteMapping("/{id}")
@@ -58,6 +65,12 @@ public class TaskController {
         Task task = taskRepository.findById(id).orElseThrow();
         task.setDone(updatedTask.isDone());
         return taskRepository.save(task);
+    }
+
+    @DeleteMapping("/delete-all")
+        public String deleteAll() {
+        taskRepository.deleteAll();
+        return "ok!";
     }
 
 /*    @PostMapping("/{id}/edit")
